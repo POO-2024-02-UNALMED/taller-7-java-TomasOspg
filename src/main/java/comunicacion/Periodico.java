@@ -28,9 +28,17 @@ public class Periodico extends Escrito {
         this.primicia = primicia;
     }
 
+    public String getInterpretacion() {
+        return interpretacion;
+    }
+
+    public void setInterpretacion(String interpretacion) {
+        this.interpretacion = interpretacion;
+    }
+
     @Override
     public int palabrasTotales(int factor) {
-        return getPaginas() * factor * 1;
+        return getPaginas() * factor * 10; 
     }
 
     @Override
@@ -40,6 +48,6 @@ public class Periodico extends Escrito {
 
     @Override
     public String toString() {
-        return getOrigen() + "\n" + getTitulo() + "\n" + getAutor() + "\n" + getPaginas() + "\n" + fecha + "\n" + primicia;
+        return String.format("%s\n%s\n%s\n%s\n%s\n%s", getOrigen(), getTitulo(), getAutor(), getPaginas(), fecha, primicia);
     }
 }
