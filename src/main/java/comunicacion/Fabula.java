@@ -18,9 +18,17 @@ public class Fabula extends Escrito {
         this.ensenanza = ensenanza;
     }
 
+    public String getInterpretacion() {
+        return interpretacion;
+    }
+
+    public void setInterpretacion(String interpretacion) {
+        this.interpretacion = interpretacion;
+    }
+
     @Override
     public int palabrasTotales(int factor) {
-        return getPaginas() * factor * 2;
+        return getPaginas() * factor;
     }
 
     @Override
@@ -30,6 +38,6 @@ public class Fabula extends Escrito {
 
     @Override
     public String toString() {
-        return getOrigen() + "\n" + getTitulo() + "\n" + getAutor() + "\n" + getPaginas() + "\n" + ensenanza;
+        return String.format("%s\n%s\n%s\n%s", getOrigen(), getTitulo(), getAutor(), getPaginas());
     }
 }
