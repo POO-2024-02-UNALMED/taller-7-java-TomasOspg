@@ -1,6 +1,6 @@
 package comunicacion;
 
-class Periodico extends Escrito {
+public class Periodico extends Escrito {
     private String fecha;
     private String primicia;
     private String interpretacion;
@@ -29,8 +29,8 @@ class Periodico extends Escrito {
     }
 
     @Override
-    public int palabrasTotales(int palabrasPagina) {
-        return getPaginas() * palabrasPagina * 10;
+    public int palabrasTotales(int factor) {
+        return getPaginas() * factor * 1;
     }
 
     @Override

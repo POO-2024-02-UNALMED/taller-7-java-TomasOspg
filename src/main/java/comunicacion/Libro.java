@@ -1,6 +1,6 @@
 package comunicacion;
 
-class Libro extends Escrito {
+public class Libro extends Escrito {
     private String co_autor;
     private String editorial;
     private String edicion;
@@ -39,8 +39,8 @@ class Libro extends Escrito {
     }
 
     @Override
-    public int palabrasTotales(int palabrasPagina) {
-        return getPaginas() * palabrasPagina * 2;
+    public int palabrasTotales(int factor) {
+        return getPaginas() * factor * 2;
     }
 
     @Override

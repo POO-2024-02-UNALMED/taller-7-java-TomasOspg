@@ -1,6 +1,6 @@
 package comunicacion;
 
-class Tesis extends Escrito {
+public class Tesis extends Escrito {
     private String idea;
     private String[] argumentos;
     private String conclusion;
@@ -49,8 +49,8 @@ class Tesis extends Escrito {
     }
 
     @Override
-    public int palabrasTotales(int palabrasPagina) {
-        return getPaginas() * palabrasPagina * 5;
+    public int palabrasTotales(int factor) {
+        return getPaginas() * factor * 5;
     }
 
     @Override
